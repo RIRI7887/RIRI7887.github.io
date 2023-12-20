@@ -1,20 +1,20 @@
-# arasgungore.github.io
+# RIRI7887.github.io
 
-My portfolio website built using HTML, CSS, and JavaScript. You can check it out [here](https://arasgungore.github.io).
+My portfolio website built using HTML, CSS, and JavaScript. You can check it out [here](https://RIRI7887.github.io).
 
 
 
 ## Screenshots
 
 <p float="center">
-    <img src="https://github.com/arasgungore/arasgungore.github.io/blob/main/Screenshots/1.png" width="800">
+    <img src="https://github.com/RIRI7887/RIRI7887.github.io/blob/main/Screenshots/1.png" width="800">
 </p>
 
 
 
 ## Author
 
-👤 **Aras Güngöre**
+👤 **Harilala Riri**
 
-* LinkedIn: [@arasgungore](https://www.linkedin.com/in/arasgungore)
-* GitHub: [@arasgungore](https://github.com/arasgungore)
+* LinkedIn: [@RIRI7887](https://www.linkedin.com/in/RIRI7887)
+* GitHub: [@RIRI7887](https://github.com/RIRI7887)
