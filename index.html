@@ -39,6 +39,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <script src="assets/js/api_trad.js"></script>
 
 
 
@@ -68,9 +69,41 @@
   ======================================================== -->
 
 </head>
+ 
 
 
+<script>
+      // Remplacez 'VOTRE_CLE_API' par votre clé API Google Translate
+      var apiKey = 'VOTRE_CLE_API';
 
+// Fonction pour traduire le contenu de la page
+function traduirePage(langueCible) {
+  var elements = document.querySelectorAll('#about');
+
+  elements.forEach(function(element) {
+    var texteOriginal = element.textContent;
+    traduireTexte(texteOriginal, langueCible)
+      .then(function(traduction) {
+        element.textContent = traduction;
+      })
+      .catch(function(erreur) {
+        console.error("Erreur de traduction :", erreur);
+      });
+  });
+}
+
+// Fonction pour traduire un texte en utilisant l'API Google Translate
+function traduireTexte(texte, langueCible) {
+  var url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}&q=${encodeURIComponent(texte)}&target=${langueCible}`;
+
+  return fetch(url, { method: 'POST' })
+    .then(response => response.json())
+    .then(data => data.data.translations[0].translatedText);
+}
+
+// Exemple d'utilisation
+traduirePage('fr'); // Traduire en français 
+</script>
 <body>
   
   <!-- ======= Start Google Tag Manager (noscript) ======= -->
@@ -93,7 +126,7 @@
   <header id="header" class="header-tops">
     <div class="container">
       <h1><a href="index.html">Harilala Rakotoniaina</a></h1>
-      <h2 style="color:#fff">I am <span class="typing" style="color:#12D640"></span></h2>
+      <h2 style="color:#fff">Je suis   <span class="typing" style="color:#12D640"></span></h2>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="#header"> <span>ACCUEIL</span></a></li>
@@ -161,72 +194,26 @@
   <section id="education" class="services">
     <div class="container">
       <div class="section-title">
-        <h2>Education</h2>
+        <h2>éducation</h2>
       </div>
       <div class="row">
         <div class="col-lg-12" data-aos="fade-up">
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="http://www.boun.edu.tr/en_US" target="_blank"><img src="assets/img/education/itu.jpg" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
             <h4 style="text-align:left;"><a href="http://www.boun.edu.tr/en_US" target="_blank" style="color:#12d640">IT-University Andoharanofotsy, Antananarivo</a><br> </h4>
-            <h5 style="text-align:left;"><em>Bachelor of Science in Development  Web & Design.</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>September 2019 - June 2022</em></span>
+            <h5 style="text-align:left;"><em>Licence en developpement  Web & Design.</em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>September 2019 - Juin 2022</em></span>
             <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
-            <h6 style="text-align:left;"><strong>Field of Specialization:</strong> Web developer</h6>   
-            <h6 style="text-align:left;"><strong>Relevant Coursework:</strong></h6>
+            <h6 style="text-align:left;"><strong>Parcours :</strong> Web et Design</h6>    
             <ul style="columns:2;text-align:left;"> 
-                <li><em>Programmation :</em>
-                  <ul>
-                    <li>Programmation de base</li>
-                    <li>Programmation avancée</li>
-                    <li>Programmation orientée objet</li>
-                    <li>Conception en modèle orienté objet</li>
-                    <li>Frameworks</li>
-                  </ul>
-                </li>
-              
-                <li><em>Conception Logicielle :</em>
-                  <ul>
-                    <li>Architecture logicielle</li>
-                    <li>Conception et modèle orientés objet</li>
-                  </ul>
-                </li>
-              
-                <li><em>Bases de Données :</em>
-                  <ul>
-                    <li>Bases de données relationnelles</li>
-                    <li>Administration et optimisation de bases de données</li> 
-                    <li>Conception et modèle relationnels</li>
-                    <li>Gestion de domaines et clustering</li>
-                  </ul>
-                </li>
-              
-                <li><em>Réseaux :</em>
-                  <ul>
-                    <li>Réseaux et communication</li>
-                    <li>Web services</li>
-                  </ul>
-                </li>              
-                <li><em>Web :</em>
-                  <ul>
-                    <li>Développement Web dynamique</li>
-                    <li>Web design</li>
-                    <li>Web avancé</li>
-                  </ul>
-                </li>
-              
-                <li><em>Techniques de Base :</em>
-                  <ul>
-                    <li>Algorithmique</li>
-                    <li>HTML et introduction au Web</li>
-                    <li>Maintenance matérielle et logicielle</li>
-                  </ul>
-                </li>
-              
-                <li><em>Projet Informatique :</em>
-                  <ul>
-                    <li>Application pratique des compétences acquises</li>
-                  </ul>
-                </li> 
+                <li><em>Programmation</em>               
+                <li><em>Conception Logicielle</em>               
+                <li><em>Bases de Données</em>               
+                <li><em>Réseaux</em> 
+                <li><em>Analyse</em> 
+                <li><em>Géométrie 2D et 3D</em> 
+                <li><em>Communication d’Entreprise</em> 
+                <li><em>MATIERES D’OUVERTURE</em> 
               
             </ul>
           </div>
@@ -234,22 +221,18 @@
         <div class="col-lg-12" data-aos="fade-up">
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="http://www.boun.edu.tr/en_US" target="_blank"><img src="assets/img/education/self.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="http://www.boun.edu.tr/en_US" target="_blank" style="color:#12d640">Sabbatical year</a><br> </h4>
+            <h4 style="text-align:left;"><a href="http://www.boun.edu.tr/en_US" target="_blank" style="color:#12d640">Année préparatoires</a><br> </h4>
             <h5 style="text-align:left;"><em>Self-learning </em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>October 2018 - June 2019</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
-            <h6 style="text-align:left;">
-              During a sabbatical year, I deliberately took a step back to refocus on my professional and personal aspirations. Throughout this period, I independently explored various fields, including computer science, management, and compta. As a self-learner, I deepened my knowledge in programming, software design, and database management, leading to the attainment of a certification on the OpenClassroom platform. My commitment to informally studying management and accounting also enhanced my business skills. 
-              This sabbatical year was a constructive phase where I solidified my professional goals and developed diverse skills that will be beneficial for my future professional contributions.
-            </h6>
-            <h6 style="text-align:left;"><strong>Relevant Coursework:</strong></h6>
+            <span class="left" style="float:left;color:#fff;"><em>Octobre 2018 - Juin 2019</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br> 
+            <h6 style="text-align:left;"><strong>Parcours:</strong></h6>
             <ul style="columns:2;text-align:left;">
-              <li>The fundamental workings of the computer</li>
-              <li>Introduction to web development</li>
-              <li>Data Structures and Algorithms</li>
-              <li>principles of economics, basics of management.</li>
-              <li>Fundamentals of Web Developering</li>
+              <li>Lecture</li>
               <li>Dactylo</li>
+              <li>Cours d'anglais</li> 
+              <li>Notions d’Economie</li>
+              <li>Notions de gestion</li> 
+              <li>Initiation à l'informatique sur OpenClassroom </li>
             </ul>
           </div>
         </div>
@@ -257,21 +240,21 @@
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="https://kocaelifenlisesi.meb.k12.tr/" target="_blank"><img src="assets/img/education/lspm.jpg" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
             <h4 style="text-align:left;"><a href="https://kocaelifenlisesi.meb.k12.tr/" target="_blank" style="color:#12d640">Lycée saint Pierre Malaza Andoharanofotsy, Antananarivo</a><br> </h4>
-            <h5 style="text-align:left;"><em>High School diploma, scientific option  </em></h5>
+            <h5 style="text-align:left;"><em>Diplôme de fin d'études secondaires, Série D  </em></h5>
             <span class="left" style="float:left;color:#fff;"><em>Promotion : 2018</em></span>
             <span class="right" style="float:right;color:#fff;"><em>Andoharanofotsy, Madagascar</em></span><br><br>
-            <h6 style="text-align:left;"><strong>Lycée saint Pierre Malaza Andoharanofotsy :</strong> I successfully completed my baccalaureate with a "bien," specializing in the scientific option.</h6>
+            <h6 style="text-align:left;"><strong>Lycée saint Pierre Malaza Andoharanofotsy : </strong> Baccalauréat   mention "bien", option scientifique.</h6>
           </div>
         </div>
         <div class="col-lg-12" data-aos="fade-up">
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="https://www.afantananarivo.mg/" target="_blank"><img src="assets/img/education/kis_transparent.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
             <h4 style="text-align:left;"><a href="https://www.afantananarivo.mg/" target="_blank" style="color:#12d640">Alliance Française Andavamamba, Antananarivo</a><br> </h4>
-            <h5 style="text-align:left;"><em>French Lessons</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>August 2016 - December 2016</em></span>
+            <h5 style="text-align:left;"><em>Cours de français</em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>Août 2016 - Decembre 2016</em></span>
             <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
-            <h6 style="text-align:left;">
-              I attended courses at the Alliance française Andavamamba with the aim of preparing myself to obtain the certification for the Diplôme d'Études en Langue Française (DELF) at the B2 level.
+            <h6 style="text-align:left;"><strong>DELF . B2 : </strong> 
+              J'ai suivi des cours à l'Alliance française Andavamamba dans le but de me préparer à obtenir la certification du Diplôme d'Études en Langue Française (DELF) au niveau B2.
             </h6>
           </div>
         </div>
@@ -299,21 +282,12 @@
             <h4 style="text-align:left;"><a href="#" target="_blank" style="color:#12d640">Konecta Madagascar</a><br>
             </h4>
             <h5 style="text-align:left;"><em>Web Developer [ Dev Exploit <strong>BCUST</strong> ] </em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>Mars 2022 - Present, Full-time</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
-            <ul style="text-align:left;">
+            <span class="left" style="float:left;color:#fff;"><em>Mars 2022 - Present, Temps plein</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br>
+            <ul style="text-align:left;"><strong>Langage  et Technos:</strong> PHP/JavaScript/Python/Mysql/PostgreSQL/Linux/Call Tools...<br>
               <li> 
-                PHP/JavaScript Developer - Call Tools :  Design and development of enhancements for a call tool based on PHP and JavaScript. 
-              </li>
-              <li>
-                Close collaboration with users (The production) to understand requirements and develop customized solutions to optimize the operations and processing of customer data .
-              </li>
-              <li>
-                Implementing new features, troubleshooting, and optimizing performance.
-              </li> 
-              <li>  
-                Continuous research for solutions to maximize user-friendliness and streamline production tool workflows.<br>
-                <strong>Handling requests through alert tickets for incidents and production requests.</strong>   
+                  Le travail implique une collaboration étroite avec les utilisateurs pour comprendre leurs besoins, développer des solutions personnalisées, mettre en œuvre de nouvelles fonctionnalités, résoudre les problèmes, optimiser les performances et rechercher continuellement des solutions pour améliorer la convivialité et rationaliser les flux de travail de l'outil de production. 
+                 <strong> La gestion des demandes se fait à travers des tickets   pour les incidents et les demandes des productions.</strong>
               </li>
             </ul>
           </div>
@@ -322,21 +296,12 @@
             <h4 style="text-align:left;"><a href="https://www.carrefouruae.com/mafuae/en/" target="_blank" style="color:#12d640">Carrefour Madagascar</a><br>
             </h4>
             <h5 style="text-align:left;"><em>Web Developer</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>September 2021 - February 2022, Full-time</em></span>
+            <span class="left" style="float:left;color:#fff;"><em>September 2021 - Fevrier 2022, Temps plein</em></span>
             <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
-            <ul style="text-align:left;">
+            <ul style="text-align:left;"><strong>Langage  et Technos:</strong> PHP/JavaScript/Codeigniter/Mysql/PostgreSQL/Linux/Git/...<br>
               <li>
-                After my 3-month internship at Carrefour Madagascar, I was accepted for a 3-month fixed-term contract. 
-                This is my very first position as a junior web developer, which taught me a lot, especially regarding the continuity of my project during the internship focused on stock management in large stores. 
-              </li>
-              <li>
-                I was able to implement an alert system for out-of-stock items, close to expiration dates, etc., with a threshold configuration feature.
-              </li>
-              <li>
-                I established an automated tagging system to enable the desired details of item information.
-              </li> 
-              <li>
-                I also made small enhancements throughout the application to meet user needs.
+                Après mon stage de 3 mois chez Carrefour Madagascar, j'ai été accepté pour un contrat à durée déterminée de 3 mois. C'est ma toute première expérience en tant que développeur web junior, qui m'a beaucoup appris, notamment en ce qui concerne la continuité de mon projet axé sur la gestion des stocks dans les grandes surfaces pendant le stage. J'ai mis en place un système d'alerte pour les articles en rupture de stock, proches de leur date d'expiration, etc., avec une fonction de configuration de seuil. J'ai établi un système de marquage automatisé pour permettre l'affichage des détails souhaités des informations sur les articles. 
+                J'ai également apporté des améliorations mineures dans l'ensemble de l'application pour répondre aux besoins des utilisateurs.
               </li>
             </ul>
           </div>
@@ -344,45 +309,45 @@
             <a href="https://www.rosariosis.org/" target="_blank"><img src="assets/img/experience/rosario.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
             <h4 style="text-align:left;"><a href="https://www.rosariosis.org/" target="_blank" style="color:#12d640">RosarioSIS</a><br> </h4>
             <h5 style="text-align:left;"><em>Web Developer</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>January 2022 - June 2022, Freelance</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Roma, Italy (Remote)</em></span><br><br>
-            <ul style="text-align:left;">
+            <span class="left" style="float:left;color:#fff;"><em>Janvier 2022 - Juin 2022, Freelance</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Rome, Italy (Remote)</em></span><br><br>
+            <ul style="text-align:left;"><strong>Langage  et Technos:</strong> PHP/JavaScript/Mysql/Linux/Git/...<br>
               <li>
-                RosarioSIS is a Free & open source Student Information System (SIS), also known as School Management System (SMS) or even School ERP.
+                RosarioSIS est un Système d'Information Scolaire (SIS) gratuit et open source, un Système de Gestion Scolaire (SMS), ERP Scolaire.
               </li>
-              <li>
-                I worked with the administrators to fix small bugs and make modifications that addressed the needs of clients based here in Madagascar. 
-                I played a role as an on-site debugger when there were issues with the application. 
-                I also provided training to new clients, showing them how to use the application.
+              <li> 
+                J'ai travaillé avec les administrateurs pour résoudre de petits bugs et apporter des modifications qui répondaient aux besoins des clients basés ici à Madagascar. 
+                J'ai joué le rôle de débogueur sur site lorsqu'il y avait des problèmes avec l'application. J'ai également dispensé une formation aux nouveaux clients, en leur montrant comment utiliser l'application.
               </li> 
             </ul>
           </div>  
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="#" target="_blank"><img src="assets/img/experience/dv.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="#" target="_blank" style="color:#12d640">DEV PERSO : road degradation prediction application</a><br> </h4>
-            <h5 style="text-align:left;"><em>Exercise Research and Development Intern</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>Mars 2019 - October 2022, Friendship</em></span>
+            <h4 style="text-align:left;"><a href="#" target="_blank" style="color:#12d640">DEV PERSO : road-degradation-prediction-application</a><br> </h4>
+            <h5 style="text-align:left;"><em>Exercise de recherche et developpement Interne</em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>Mars 2019 - Octobre 2022, Friendship</em></span>
             <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
-            <ul style="text-align:left;">
+            <ul style="text-align:left;"><strong>Langage  et Technos:</strong> JSP/Spring/Tomcat/REST/Mysql/Linux/Git/...<br>
               <li>
-                The road degradation prediction application for Madagascar aims to anticipate road issues using historical and real-time data. 
-                It integrates technologies such as IoT and machine learning to assess influencing parameters. The user-friendly interface provides visual mapping, real-time alerts, and encourages community participation. 
-                Data security is a priority, as well as partnerships with local authorities. 
-                Sustainability and scalability are built into the design, with a focus on user training and awareness. The goal is to enhance the management of road infrastructure and promote proactive maintenance.
+                Le projet d'application de prédiction de dégradation des routes pour Madagascar vise à anticiper les problèmes routiers en utilisant des données historiques et en temps réel. 
+                Il intègre des technologies telles que l'IoT (Internet des objets) et l'apprentissage automatique pour évaluer les paramètres influents. 
+                L'interface conviviale offre une cartographie visuelle, des alertes en temps réel et encourage la participation communautaire. 
+                La sécurité des données est une priorité, tout comme les partenariats avec les autorités locales. 
+                La durabilité et la scalabilité sont intégrées à la conception, avec un accent sur la formation et la sensibilisation des utilisateurs. 
+                L'objectif est d'améliorer la gestion de l'infrastructure routière et de promouvoir une maintenance proactive.
               </li> 
             </ul>
           </div> 
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="#" target="_blank"><img src="assets/img/experience/dv.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
             <h4 style="text-align:left;"><a href="#" target="_blank" style="color:#12d640">DEV PERSO : </a><br> </h4>
-            <h5 style="text-align:left;"><em>Exercise Research and Development Intern</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>July 2019 , Friendship</em></span>
+            <h5 style="text-align:left;"><em>Exercise de recherche et developpement Interne</em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>Juillet 2019 , Friendship</em></span>
             <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
-            <ul style="text-align:left;">
+            <ul style="text-align:left;"><strong>Langage  et Technos:</strong> MariaDB/Mysql/PostgreSQL/Linux/Git/...<br>
               <li>
-                Setting up a PostgreSQL configuration with a master and slave server involves installing PostgreSQL on each server, configuring the master to allow replication, creating a replication user, and performing an initial backup transferred to the slave. 
-                Configuring the slave includes modifying configuration files, starting recovery, and ongoing monitoring. Failover tests and configuration adjustments are conducted, with a focus on security and regular backups of the master server.
-              </li> 
+                La configuration d'une base de données PostgreSQL avec un serveur principal (master) et un serveur secondaire (slave) implique l'installation de PostgreSQL sur chaque serveur, la configuration du master pour autoriser la réplication, la création d'un utilisateur de réplication, et la réalisation d'une sauvegarde initiale transférée vers le slave. La configuration du slave comprend la modification des fichiers de configuration, le démarrage de la récupération, et la surveillance continue.
+                 Des tests de basculement et des ajustements de configuration sont effectués, mettant l'accent sur la sécurité et les sauvegardes régulières du serveur principal. </li> 
             </ul>
           </div>
         </div>
@@ -406,25 +371,23 @@
           <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
             <a href="#" target="_blank" rel="noreferrer"><img style="padding:5px 5px;" src="assets/img/projects/sifakaogo.png" class="img-fluid" width="300" height="300"></a>
             <a href="#" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;color:#12d640"><strong>SIFAKA</strong></h5></a>
-            <p style="padding:0px 2px;color:#fff;">SIFAKA is a functional commercial management project within the Société Malgache des Magasins. <br>
-              It was developed using the PHP CodeIgniter framework, incorporating JQuery, and utilizing PostgreSQL as the database backend. <br>
-              I had the opportunity to contribute to the progress of this significant project during my three-month internship with the company, which later led to an offer of a three-month fixed-term contract.</p>
+            <p style="padding:0px 2px;color:#fff;">SIFAKA est un projet de gestion commerciale fonctionnel au sein de la Société Malgache des Magasins. Il a été développé en utilisant le framework PHP CodeIgniter, 
+              intégrant JQuery et utilisant PostgreSQL comme base de données. J'ai eu l'occasion de contribuer au progrès de ce projet important lors de mon stage de trois mois au sein de l'entreprise,
+               ce qui a ensuite débouché sur une offre de contrat à durée déterminée de trois mois.</p>
           </div>
           <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
             <a href="#" target="_blank" rel="noreferrer"><img style="padding:5px 5px;" src="assets/img/projects/lalana.png" class="img-fluid" width="324" height="324"></a>
             <a href="#" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;color:#12d640"><strong>LALANA</strong></h5></a>
-            <p style="padding:0px 2px;color:#fff;">The road degradation prediction application for Madagascar aims to anticipate road issues using historical and real-time data. 
-              It integrates technologies such as IoT and machine learning to assess influencing parameters. The user-friendly interface provides visual mapping, real-time alerts, and encourages community participation. 
-              Data security is a priority, as well as partnerships with local authorities. Sustainability and scalability are built into the design, with a focus on user training and awareness. 
-              The goal is to enhance the management of road infrastructure and promote proactive maintenance.
+            <p style="padding:0px 2px;color:#fff;">L'application de prédiction de dégradation des routes pour Madagascar utilise des données historiques et en temps réel, 
+              ainsi que des technologies comme l'IoT et l'apprentissage automatique pour anticiper les problèmes routiers. Elle propose une interface conviviale avec une cartographie visuelle, des alertes en temps réel et encourage la participation communautaire, tout en mettant l'accent sur la sécurité des données et les partenariats avec les autorités locales. La conception intègre la durabilité et la scalabilité, avec une attention particulière à la formation des utilisateurs, 
+              dans le but d'améliorer la gestion de l'infrastructure routière et de favoriser la maintenance proactive.
           </div>
           <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
             <a href="https://www.rosariosis.org/" target="_blank" rel="noreferrer"><img style="padding:5px 5px;" src="assets/img/experience/rosario.png" class="img-fluid" width="300" height="300"></a>
             <a href="https://www.rosariosis.org/" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;color:#12d640"><strong>ROSARIO</strong></h5></a>
-            <p style="padding:0px 2px;color:#fff;">ROSARIO is a school and HR management builder project within some Catholic schools and a public high school. <br>
-              The project was developed using the CodeIgniter framework, incorporating JQuery, and utilizing PostgreSQL as the database backend. <br>
-              It is currently functional and well adapted to the needs of school administrations. <br>
-              However, we continue to innovate, add new features according to the schools' requirements, and provide assistance to support them.</p>
+            <p style="padding:0px 2px;color:#fff;">Le projet ROSARIO est un système de gestion scolaire et des ressources humaines utilisé dans plusieurs écoles catholiques et un lycée public. 
+              Il a été développé en utilisant le framework CodeIgniter, en incorporant JQuery, et en utilisant PostgreSQL comme base de données. Le système est actuellement fonctionnel et bien adapté aux besoins des administrations scolaires.
+               Cependant, des innovations sont toujours en cours, de nouvelles fonctionnalités sont ajoutées en fonction des exigences des écoles, et un support continu est assuré.
           </div>
           <!--
           <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
@@ -452,7 +415,7 @@
   <section id="skills" class="services">
     <div class="container">
       <div class="section-title">
-        <h2>Skills</h2>
+        <h2>COMPETENCE</h2>
       </div>
       <div class="row">
         <div class="col-lg-12" data-aos="fade-up">
@@ -617,12 +580,12 @@
         <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"> 
           <a href="https://drive.google.com/file/d/1Tg1F6anAdZDcGmwIu7SCLCnYYM7zhdn5/view?usp=sharing" target="_blank"><div class="icon"><i class="icofont-page"></i></div></a>
           <h4 class="title"><a style="color:#12d640;" href="https://drive.google.com/file/d/1Tg1F6anAdZDcGmwIu7SCLCnYYM7zhdn5/view?usp=sharing" target="_blank">Curriculum Vitae</a></h4>
-          <p class="description" style="color:#fff;">The above link contains my Curriculum Vitae (CV).</p>
+          <p class="description" style="color:#fff;">Le lien ci-dessus contient mon curriculum vitae (CV).</p>
         </div>
         <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
           <a href="https://resume.github.io/?harilalariri" target="_blank"><div class="icon"><i class="bx bxl-github"></i></div></a>
           <h4 class="title"><a style="color:#12d640;" href="https://resume.github.io/?harilalariri" target="_blank">GitHub</a></h4>
-          <p class="description" style="color:#fff;">The above link contains my resume based on my GitHub repos/activity.</p>
+          <p class="description" style="color:#fff;">Le lien ci-dessus contient mon  GitHub repos/activity.</p>
         </div>
       </div>
     </div>
@@ -643,7 +606,7 @@
         <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-share-alt"></i>
-            <h3 style="color:#12d640;">Social Profiles</h3>
+            <h3 style="color:#12d640;">Social  </h3>
             <div class="social-links">
               <a href="mailto:harilalariri@gmail.com" target="_blank" class="gmail"><i class="bx bxl-google"></i></a>
               <a href="https://www.linkedin.com/in/harilalarakotoniaina/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
@@ -707,7 +670,7 @@
 
   <script type="text/javascript">
     var typed = new Typed('.typing',{
-      strings: ["a Developer", "a Passionate", "a Researcher"],
+      strings: ["un Developpeur", "Passionné"],
       loop: true,
       typeSpeed: 65,
       backSpeed: 65
