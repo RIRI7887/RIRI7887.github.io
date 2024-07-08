@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- ======= Start Google Tag Manager ======= -->
+
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5BB8W2X');</script>
+
+  <!-- ======= End Google Tag Manager ======= -->
+
+  <!-- ==========================NAPINA, SI JAMAIS ça PLANTE, ce sera surement ça ====================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+  <!-- ==========================NAPINA, SI JAMAIS ça PLANTE, ce sera surement ça ====================================== -->
+
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Harilala's Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+
+  <!-- Google Fonts -->
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+
+
+  <!-- Vendor CSS Files -->
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <script src="assets/js/api_trad.js"></script>
+
+
+
+  <!-- Template Main CSS File -->
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169007209-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-169007209-3');
+  </script>
+
+
+
+  <!-- =======================================================
+  * Template Name: Personal - v2.1.0
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+</head>
+
+
+
+<script>
+  // Remplacez 'VOTRE_CLE_API' par votre clé API Google Translate
+  var apiKey = 'VOTRE_CLE_API';
+
+  // Fonction pour traduire le contenu de la page
+  function traduirePage(langueCible) {
+    var elements = document.querySelectorAll('#about');
+
+    elements.forEach(function (element) {
+      var texteOriginal = element.textContent;
+      traduireTexte(texteOriginal, langueCible)
+        .then(function (traduction) {
+          element.textContent = traduction;
+        })
+        .catch(function (erreur) {
+          console.error("Erreur de traduction :", erreur);
+        });
+    });
+  }
+
+  // Fonction pour traduire un texte en utilisant l'API Google Translate
+  function traduireTexte(texte, langueCible) {
+    var url = `https://translation.googleapis.com/language/translate/v2?key=${apiKey}&q=${encodeURIComponent(texte)}&target=${langueCible}`;
+
+    return fetch(url, { method: 'POST' })
+      .then(response => response.json())
+      .then(data => data.data.translations[0].translatedText);
+  }
+
+  // Exemple d'utilisation
+  traduirePage('fr'); // Traduire en français 
+</script>
+
+<body>
+
+  <!-- ======= Start Google Tag Manager (noscript) ======= -->
+
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BB8W2X" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ======= End Google Tag Manager (noscript) ======= -->
+
+
+
+
+  <img style="opacity: 0.1;" class="background-image" src="assets/img/background/background_home.jpg" />
+
+  <!-- <video class="background-image" src="assets/img/background/binary_rain.mp4" muted loop autoplay></video> -->
+
+
+  <!-- ======= Start Header ======= -->
+
+  <header id="header" class="header-tops">
+    <div class="container">
+      <h1><a href="index.html">Harilala Rakotoniaina</a></h1>
+      <h2 style="color:#fff">Je suis <span class="typing" style="color:#12D640"></span></h2>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#header"> <span>ACCUEIL</span></a></li>
+          <li><a href="#about"> <span>MOI</span></a></li>
+          <li><a href="#education"> <span>ÉDUCATION</span></a></li>
+          <li><a href="#experience"> <span>EXPÉRIENCE</span></a></li>
+          <li><a href="#projects"> <span>PROJETS</span></a></li>
+          <li><a href="#skills"> <span>COMPÉTENCE </span></a></li>
+          <li><a href="#messervices"> <span>SERVICES </span></a></li>
+          <!-- <li><a href="#blog"> <span>BLOG </span></a></li> -->
+          <li><a href="#cv"> <span>CV</span></a></li>
+          <li><a href="#contact"> <span>CONTACTS</span></a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <a href="mailto:harilalariri@gmail.com" target="_blank" class="gmail"><i class="bx bxl-google"></i></a>
+        <a href="https://www.linkedin.com/in/harilalarakotoniaina/" target="_blank" class="linkedin"><i
+            class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/riri7887" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+        <!-- <a href="https://www.instagram.com/harilalariri" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+        <!-- <a href="https://www.youtube.com/@harilalariri" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>  -->
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= End Header ======= -->
+
+
+  <!-- ======= Start About Section ======= -->
+
+  <section id="about" class="about">
+    <div class="about-me container">
+      <div class="section-title">
+        <h2>À Propos</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="assets/img/about/harilala.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <p>
+            Bonjour, je suis Harilala Rakotoniaina.<br><br>
+
+            Je suis un developpeur web, avec bientôt quatre années d'expérience dans ce domaine. <br>
+            Mes quelques connaissances en PHP et mes compétences en JavaScript, avec l'utilisation de bibliothèques
+            telles que jQuery, React et chart.js, me permettent de créer des applications web réactives et
+            dynamiques.<br>
+            J'ai également de l'expérience dans l'utilisation de frameworks tels que Bootstrap, Vue.js, Node.js avec
+            Express, et Ionic, ce qui me permet de concevoir des interfaces utilisateur modernes et efficaces. <br>
+            Je suis constamment engagé dans une phase d'apprentissage perpétuel, cherchant à acquérir continuellement de
+            nouvelles compétences dans ce domaine. En ce moment, je suis en cours de formation sur les innovations et la
+            gestion de projets informatiques. Parallèlement, je souhaite approfondir mes connaissances en informatique
+            en lien avec les aspects de gestion et de management.
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="icofont-rounded-right"></i> <strong>Ville:</strong> Antananarivo, Madagascar</li>
+                <li><i class="icofont-rounded-right"></i> <strong>E&#8209;mail:</strong> harilalariri@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= End About Section ======= -->
+
+
+
+  <!-- ======= Start Education Section ======= -->
+
+  <section id="education" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>éducation</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <a href="http://www.boun.edu.tr/en_US" target="_blank"><img src="assets/img/education/itu.jpg"
+                class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
+            <h4 style="text-align:left;"><a href="http://www.boun.edu.tr/en_US" target="_blank"
+                style="color:#12d640">IT-University Andoharanofotsy, Antananarivo</a><br> </h4>
+            <h5 style="text-align:left;"><em>Licence en developpement Web & Design.</em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>September 2019 - Juin 2022</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
+            <h6 style="text-align:left;"><strong>Parcours :</strong> Web et Design</h6>
+            <ul style="columns:2;text-align:left;">
+              <li><em>Programmation</em>
+              <li><em>Conception Logicielle</em>
+              <li><em>Bases de Données</em>
+              <li><em>Réseaux</em>
+              <li><em>Analyse</em>
+              <li><em>Géométrie 2D et 3D</em>
+              <li><em>Communication d’Entreprise</em>
+              <li><em>MATIERES D’OUVERTURE</em>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <a href="http://www.boun.edu.tr/en_US" target="_blank"><img src="assets/img/education/self.png"
+                class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
+            <h4 style="text-align:left;"><a href="http://www.boun.edu.tr/en_US" target="_blank"
+                style="color:#12d640">Année préparatoires</a><br> </h4>
+            <h5 style="text-align:left;"><em>Self-learning </em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>Octobre 2018 - Juin 2019</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
+            <h6 style="text-align:left;"><strong>Parcours:</strong></h6>
+            <ul style="columns:2;text-align:left;">
+              <li>Lecture</li>
+              <li>Dactylo</li>
+              <li>Cours d'anglais</li>
+              <li>Notions d’Economie[6 mois cours academique]</li>
+              <li>Notions de gestion</li>
+              <li>Initiation à l'informatique sur OpenClassroom </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://kocaelifenlisesi.meb.k12.tr/" target="_blank"><img src="assets/img/education/lspm.jpg"
+                class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
+            <h4 style="text-align:left;"><a href="https://kocaelifenlisesi.meb.k12.tr/" target="_blank"
+                style="color:#12d640">Lycée saint Pierre Malaza Andoharanofotsy, Antananarivo</a><br> </h4>
+            <h5 style="text-align:left;"><em>Diplôme de fin d'études secondaires, Série D </em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>Promotion : 2018</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Andoharanofotsy, Madagascar</em></span><br><br>
+            <h6 style="text-align:left;"><strong>Lycée saint Pierre Malaza Andoharanofotsy : </strong> Baccalauréat
+              mention "bien", option scientifique.</h6>
+          </div>
+        </div>
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://www.afantananarivo.mg/" target="_blank"><img src="assets/img/education/kis_transparent.png"
+                class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
+            <h4 style="text-align:left;"><a href="https://www.afantananarivo.mg/" target="_blank"
+                style="color:#12d640">Alliance Française Andavamamba, Antananarivo</a><br> </h4>
+            <h5 style="text-align:left;"><em>Cours de français</em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>Août 2016 - Decembre 2016</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
+            <h6 style="text-align:left;"><strong>DELF . B2 : </strong>
+              J'ai suivi des cours à l'Alliance française Andavamamba dans le but de me préparer à obtenir la
+              certification du Diplôme d'Études en Langue Française (DELF) au niveau B2.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======= End Education Section ======= -->
+
+
+
+  <!-- ======= Start Experience Section ======= -->
+
+  <section id="experience" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Experience</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <a href="#" target="_blank"><img src="assets/img/experience/konecta.png" class="img-fluid"
+                style="float:left;margin:0 10px 0 0;" width="90"></a>
+            <h4 style="text-align:left;"><a href="#" target="_blank" style="color:#12d640">Konecta Madagascar</a><br>
+            </h4>
+            <h5 style="text-align:left;"><em>Web Developer [ Konecta digital <strong>BCUST</strong> ] </em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>Mars 2022 - Present, Temps plein</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br>
+            <ul style="text-align:left;"><strong>Langage et Technos:</strong>
+              PHP/JavaScript/Python/Mysql/PostgreSQL/Linux/Call Tools...<br>
+              <li>
+                Le travail implique une collaboration étroite avec les utilisateurs pour comprendre leurs besoins,
+                développer des solutions personnalisées, mettre en œuvre de nouvelles fonctionnalités, résoudre les
+                problèmes, optimiser les performances et rechercher continuellement des solutions pour améliorer la
+                convivialité et rationaliser les flux de travail de l'outil de production.
+                <br><strong style="color:#12d640"> La gestion des demandes se fait à travers des tickets pour les
+                  incidents et les demandes des productions.</strong>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://www.carrefouruae.com/mafuae/en/" target="_blank"><img
+                src="assets/img/experience/carrefour.png" class="img-fluid" style="float:left;margin:0 10px 0 0;"
+                width="90"></a>
+            <h4 style="text-align:left;"><a href="https://www.carrefouruae.com/mafuae/en/" target="_blank"
+                style="color:#12d640">Carrefour Madagascar</a><br>
+            </h4>
+            <h5 style="text-align:left;"><em>Web Developer</em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>September 2021 - Fevrier 2022, Temps plein</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
+            <ul style="text-align:left;"><strong>Langage et Technos:</strong>
+              PHP/JavaScript/Codeigniter/Mysql/PostgreSQL/Linux/Git/...<br>
+              <li>
+                Après mon stage de 3 mois chez Carrefour Madagascar, j'ai été accepté pour un contrat à durée déterminée
+                de 3 mois. C'est ma toute première expérience en tant que développeur web junior, qui m'a beaucoup
+                appris, notamment en ce qui concerne la continuité de mon projet axé sur la gestion des stocks dans les
+                grandes surfaces pendant le stage. J'ai mis en place un système d'alerte pour les articles en rupture de
+                stock, proches de leur date d'expiration, etc., avec une fonction de configuration de seuil. J'ai établi
+                un système de marquage automatisé pour permettre l'affichage des détails souhaités des informations sur
+                les articles.
+                J'ai également apporté des améliorations mineures dans l'ensemble de l'application pour répondre aux
+                besoins des utilisateurs.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://www.rosariosis.org/" target="_blank"><img src="assets/img/experience/rosario.png"
+                class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
+            <h4 style="text-align:left;"><a href="https://www.rosariosis.org/" target="_blank"
+                style="color:#12d640">RosarioSIS</a><br> </h4>
+            <h5 style="text-align:left;"><em>Web Developer</em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>Janvier 2022 - Juin 2022, Freelance</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Rome, Italy (Remote)</em></span><br><br>
+            <ul style="text-align:left;"><strong>Langage et Technos:</strong> PHP/JavaScript/Mysql/Linux/Git/...<br>
+              <li>
+                RosarioSIS est un Système d'Information Scolaire (SIS) gratuit et open source, un Système de Gestion
+                Scolaire (SMS), ERP Scolaire.
+              </li>
+              <li>
+                J'ai travaillé avec les administrateurs pour résoudre de petits bugs et apporter des modifications qui
+                répondaient aux besoins des clients basés ici à Madagascar.
+                J'ai joué le rôle de débogueur sur site lorsqu'il y avait des problèmes avec l'application. J'ai
+                également dispensé une formation aux nouveaux clients, en leur montrant comment utiliser l'application.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <a href="#" target="_blank"><img src="assets/img/experience/dv.png" class="img-fluid"
+                style="float:left;margin:0 10px 0 0;" width="90"></a>
+            <h4 style="text-align:left;"><a href="#" target="_blank" style="color:#12d640">DEV PERSO :
+                road-degradation-prediction-application</a><br> </h4>
+            <h5 style="text-align:left;"><em>Exercise de recherche et developpement Interne</em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>Mars 2019 - Octobre 2022, Friendship</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
+            <ul style="text-align:left;"><strong>Langage et Technos:</strong>
+              JSP/Spring/Tomcat/REST/Mysql/Linux/Git/...<br>
+              <li>
+                Le projet d'application de prédiction de dégradation des routes pour Madagascar vise à anticiper les
+                problèmes routiers en utilisant des données historiques et en temps réel.
+                Il intègre des technologies telles que l'IoT (Internet des objets) et l'apprentissage automatique pour
+                évaluer les paramètres influents.
+                L'interface conviviale offre une cartographie visuelle, des alertes en temps réel et encourage la
+                participation communautaire.
+                La sécurité des données est une priorité, tout comme les partenariats avec les autorités locales.
+                La durabilité et la scalabilité sont intégrées à la conception, avec un accent sur la formation et la
+                sensibilisation des utilisateurs.
+                L'objectif est d'améliorer la gestion de l'infrastructure routière et de promouvoir une maintenance
+                proactive.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <a href="#" target="_blank"><img src="assets/img/experience/dv.png" class="img-fluid"
+                style="float:left;margin:0 10px 0 0;" width="90"></a>
+            <h4 style="text-align:left;"><a href="#" target="_blank" style="color:#12d640">DEV PERSO : </a><br> </h4>
+            <h5 style="text-align:left;"><em>Exercise de recherche et developpement Interne</em></h5>
+            <span class="left" style="float:left;color:#fff;"><em>Juillet 2019 , Friendship</em></span>
+            <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
+            <ul style="text-align:left;"><strong>Langage et Technos:</strong> MariaDB/Mysql/PostgreSQL/Linux/Git/...<br>
+              <li>
+                La configuration d'une base de données PostgreSQL avec un serveur principal (master) et un serveur
+                secondaire (slave) implique l'installation de PostgreSQL sur chaque serveur, la configuration du master
+                pour autoriser la réplication, la création d'un utilisateur de réplication, et la réalisation d'une
+                sauvegarde initiale transférée vers le slave. La configuration du slave comprend la modification des
+                fichiers de configuration, le démarrage de la récupération, et la surveillance continue.
+                Des tests de basculement et des ajustements de configuration sont effectués, mettant l'accent sur la
+                sécurité et les sauvegardes régulières du serveur principal. </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= End Experience Section ======= -->
+
+
+
+  <!-- ======= Start Projects Section ======= -->
+
+  <section id="projects" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Projets</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up" style="display:inline-block;">
+          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
+            style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
+            <a href="#" target="_blank" rel="noreferrer"><img style="padding:5px 5px;"
+                src="assets/img/projects/sifakaogo.png" class="img-fluid" width="300" height="300"></a>
+            <a href="#" target="_blank" rel="noreferrer">
+              <h5 style="padding:5px 5px;color:#12d640"><strong>SIFAKA</strong></h5>
+            </a>
+            <p style="padding:0px 2px;color:#fff;">SIFAKA est un projet de gestion commerciale fonctionnel au sein de la
+              Société Malgache des Magasins. Il a été développé en utilisant le framework PHP CodeIgniter,
+              intégrant JQuery et utilisant PostgreSQL comme base de données. J'ai eu l'occasion de contribuer au
+              progrès de ce projet important lors de mon stage de trois mois au sein de l'entreprise,
+              ce qui a ensuite débouché sur une offre de contrat à durée déterminée de trois mois.</p>
+          </div>
+          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
+            style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
+            <a href="#" target="_blank" rel="noreferrer"><img style="padding:5px 5px;"
+                src="assets/img/projects/lalana.png" class="img-fluid" width="324" height="324"></a>
+            <a href="#" target="_blank" rel="noreferrer">
+              <h5 style="padding:5px 5px;color:#12d640"><strong>LALANA</strong></h5>
+            </a>
+            <p style="padding:0px 2px;color:#fff;">L'application de prédiction de dégradation des routes pour Madagascar
+              utilise des données historiques et en temps réel,
+              ainsi que des technologies comme l'IoT et l'apprentissage automatique pour anticiper les problèmes
+              routiers. Elle propose une interface conviviale avec une cartographie visuelle, des alertes en temps réel
+              et encourage la participation communautaire, tout en mettant l'accent sur la sécurité des données et les
+              partenariats avec les autorités locales. La conception intègre la durabilité et la scalabilité, avec une
+              attention particulière à la formation des utilisateurs,
+              dans le but d'améliorer la gestion de l'infrastructure routière et de favoriser la maintenance proactive.
+          </div>
+          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
+            style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
+            <a href="https://www.rosariosis.org/" target="_blank" rel="noreferrer"><img style="padding:5px 5px;"
+                src="assets/img/experience/rosario.png" class="img-fluid" width="300" height="300"></a>
+            <a href="https://www.rosariosis.org/" target="_blank" rel="noreferrer">
+              <h5 style="padding:5px 5px;color:#12d640"><strong>ROSARIO</strong></h5>
+            </a>
+            <p style="padding:0px 2px;color:#fff;">Le projet ROSARIO est un système de gestion scolaire et des
+              ressources humaines utilisé dans plusieurs écoles catholiques et un lycée public.
+              Il a été développé en utilisant le framework CodeIgniter, en incorporant JQuery, et en utilisant
+              PostgreSQL comme base de données. Le système est actuellement fonctionnel et bien adapté aux besoins des
+              administrations scolaires.
+              Cependant, des innovations sont toujours en cours, de nouvelles fonctionnalités sont ajoutées en fonction
+              des exigences des écoles, et un support continu est assuré.
+          </div>
+          <!--
+          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
+            <a href="https://github.com/harilalariri/chess-bot" target="_blank" rel="noreferrer"><img style="padding:5px 5px;" src="assets/img/projects/word_game.jpg" class="img-fluid"></a>
+            <a href="https://github.com/harilalariri/chess-bot" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;color:#12d640"><strong>Word Game</strong></h5></a>
+            <p style="padding:0px 2px;color:#fff;">A C++ project in which you can play the Turkish game show “Kelime Oyunu” (Word Game) on the terminal.</p>
+          </div>
+          <div class="col-md-4 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
+            <a href="https://github.com/harilalariri/rocket-flight-simulator" target="_blank" rel="noreferrer"><img style="padding:5px 5px;" src="assets/img/projects/rocket_flight_simulator.jpg" class="img-fluid"></a>
+            <a href="https://github.com/harilalariri/rocket-flight-simulator" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;color:#12d640"><strong>Rocket Flight Simulator</strong></h5></a>
+            <p style="padding:0px 2px;color:#fff;">A Simulink project which can accurately simulate the motion of a flying rocket in one&#8209;dimensional space.</p>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= End Projects Section ======= -->
+
+
+
+  <!-- ======= Start Skills Section ======= -->
+
+  <section id="skills" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>COMPETENCE</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 style="text-align:left;color:#12d640;">Programming</h4>
+            <div style="text-align:left;">
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                    alt="java" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Java</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                    alt="javascript" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">JavaScript</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.php.net/" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php"
+                    width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Php</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+            </div>
+          </div>
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 style="text-align:left;color:#12d640;">Technologies</h4>
+            <div style="text-align:left;">
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.codeigniter.com/" target="_blank" rel="noreferrer"> <img
+                    src="https://www.codeigniter.com/assets/icons/ci-logo.png" alt="codeigniter" width="40"
+                    height="40" /> </a>
+                <figcaption style="text-align:center;">CodeIgniter</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.mysql.com" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                    alt="mysql" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">MySQL</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
+                    alt="PostgreSQL" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">PostgreSQL</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.mongodb.com" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+                    alt="mongodb" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">MongoDB</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://git-scm.com" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git"
+                    width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Git</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.docker.com" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
+                    alt="docker" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Docker</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <!-- <figure class="item" style="display:inline-block;">
+                <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                    alt="aws" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">AWS</figcaption>
+              </figure>
+              &nbsp; &nbsp; -->
+
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.linux.org" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+                    alt="linux" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Linux</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg"
+                    alt="bash" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Bash</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+            </div>
+          </div>
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 style="text-align:left;color:#12d640;">Libraries</h4>
+            <div style="text-align:left;">
+              <figure class="item" style="display:inline-block;">
+                <a href="https://jquery.com/" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original.svg"
+                    alt="jquery" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">JQuery</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://nodejs.org/" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+                    alt="nodejs" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Nodejs</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://vuejs.org/" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"
+                    alt="vuejs" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Vuejs</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://reactjs.org" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                    alt="reactjs" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">React.js</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"
+                    alt="nextjs" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Nextjs</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://ionicframework.com/" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/ionic/ionic-original.svg"
+                    alt="ionic" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Ionic</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer"> <img
+                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg"
+                    alt="bootstrap" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">Bootstrap</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img
+                    src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40"
+                    height="40" /> </a>
+                <figcaption style="text-align:center;">TensorFlow</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+              <figure class="item" style="display:inline-block;">
+                <a href="https://sweetalert2.github.io/" target="_blank" rel="noreferrer"> <img
+                    src="https://sweetalert2.github.io//images/SweetAlert2.png" alt="tensorflow" width="40"
+                    height="40" /> </a>
+                <figcaption style="text-align:center;">Sweetalert2</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+            </div>
+          </div>
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 style="text-align:left;color:#12d640;">Langue</h4>
+            <div style="text-align:left;">
+              <figure class="item" style="display:inline-block;">
+                <a href="https://malagasy.com/" target="_blank" rel="noreferrer"> <img
+                    src="https://m.media-amazon.com/images/I/41MOyjyupjL._AC_SX425_.jpg" alt="jquery" width="40"
+                    height="40" /> </a>
+                <figcaption style="text-align:center;">MALAGASY <br>[Langue maternelle]</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://nodejs.org/" target="_blank" rel="noreferrer"> <img
+                    src="https://media.tissusplus.com/29375-large_default/drapeau-francais-au-metre-largeur-70-cm.webp"
+                    alt="nodejs" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">FRANÇAIS <br>[Niveau avancé]</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://www.federalflags.com/cdn/shop/products/002…520-4947-b29b-b2b76d031c42_5000x.jpg?v=1645022098"
+                  target="_blank" rel="noreferrer"> <img src="assets/img/other/gb.jpg" alt="gb" width="40"
+                    height="40" /> </a>
+                <figcaption style="text-align:center;">ANGLAIS <br>[Compétence professionnelle]</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+            </div>
+          </div>
+          <!-- <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 style="text-align:left;color:#12d640;">Centre d'interêt et autres</h4>
+            <div style="text-align:left;">
+              <figure class="item" style="display:inline-block;">
+                <a href="https://malagasy.com/" target="_blank" rel="noreferrer"> <img
+                    src="https://m.media-amazon.com/images/I/41MOyjyupjL._AC_SX425_.jpg" alt="jquery" width="40"
+                    height="40" /> </a>
+                <figcaption style="text-align:center;">MALAGASY [Langue maternelle]</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://nodejs.org/" target="_blank" rel="noreferrer"> <img
+                    src="https://media.tissusplus.com/29375-large_default/drapeau-francais-au-metre-largeur-70-cm.webp"
+                    alt="nodejs" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">FRANÇAIS [Niveau avancé]</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+
+              <figure class="item" style="display:inline-block;">
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thu…55px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" target="_blank" rel="noreferrer"> <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thu…55px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+                    alt="gb" width="40" height="40" /> </a>
+                <figcaption style="text-align:center;">ANGLAIS [Compétence professionnelle]</figcaption>
+              </figure>
+              &nbsp; &nbsp;
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= End Skills Section ======= -->
+
+
+
+
+  <!-- ======= Start blog Section ======= -->
+
+  <section id="blog" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>BLOGS</h2>
+      </div><br><br>
+
+      <div class="col-12 layout-spacing">
+        <div class="statbox widget box box-shadow">
+          <div class="widget-content widget-content-area rounded-background-pills">
+
+            <ul class="nav nav-pills justify-content-center" id="rounded-background-pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link btn-rounded active" id="Consultation-tab" data-toggle="pill" href="#Consultation"
+                  role="tab" aria-controls="Consultation" aria-selected="true"><i class="flaticon-home-fill-1"></i>
+                  Home</a>
+              </li>
+
+              <li class="nav-item ml-1">
+                <a class="nav-link btn-rounded" id="devstrategie-tab" data-toggle="pill" href="#devstrategie" role="tab"
+                  aria-controls="devstrategie" aria-selected="false"><i class="flaticon-user-7"></i>
+                  Profile</a>
+              </li>
+
+              <li class="nav-item ml-1">
+                <a class="nav-link btn-rounded" id="dev&maintenance-tab" data-toggle="pill" href="#dev&maintenance"
+                  role="tab" aria-controls="dev&maintenance" aria-selected="false"><i class="flaticon-telephone"></i>
+                  Contact</a>
+              </li>
+
+              <li class="nav-item ml-1">
+                <a class="nav-link  btn-rounded" id="formation&atelier-tab" data-toggle="pill" href="#formation&atelier"
+                  role="tab" aria-controls="formation&atelier" aria-selected="false"><i class="flaticon-settings-7"></i>
+                  Settings</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="rounded-background-pills-tabContent">
+              <div class="tab-pane fade show active" id="Consultation" role="tabpanel"
+                aria-labelledby="Consultation-tab">
+                <h4 class="mb-4">We move your world!</h4>
+                <div class="col-lg-12" data-aos="fade-up">
+                  <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://www.rosariosis.org/" target="_blank"><img src="assets/img/experience/rosario.png"
+                        class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
+                    <h4 style="text-align:left;"><a href="https://www.rosariosis.org/" target="_blank"
+                        style="color:#12d640">RosarioSIS</a><br> </h4>
+                    <h5 style="text-align:left;"><em>Web Developer</em></h5>
+                    <span class="left" style="float:left;color:#fff;"><em>Janvier 2022 - Juin 2022,
+                        Freelance</em></span>
+                    <span class="right" style="float:right;color:#fff;"><em>Rome, Italy (Remote)</em></span><br><br>
+                    <ul style="text-align:left;"><strong>Langage et Technos:</strong>
+                      PHP/JavaScript/Mysql/Linux/Git/...<br>
+                      <li>
+                        RosarioSIS est un Système d'Information Scolaire (SIS) gratuit et open source, un Système de
+                        Gestion
+                        Scolaire (SMS), ERP Scolaire.
+                      </li>
+                      <li>
+                        J'ai travaillé avec les administrateurs pour résoudre de petits bugs et apporter des
+                        modifications qui
+                        répondaient aux besoins des clients basés ici à Madagascar.
+                        J'ai joué le rôle de débogueur sur site lorsqu'il y avait des problèmes avec l'application. J'ai
+                        également dispensé une formation aux nouveaux clients, en leur montrant comment utiliser
+                        l'application.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="devstrategie" role="tabpanel" aria-labelledby="devstrategie-tab">
+                <div class="media mt-4 mb-3">
+                  <img class="mr-3" height="25%" width="25%" src="assets/img/experience/dv.png"
+                    alt="Generic placeholder image">
+                  <div class="col-lg-12" data-aos="fade-up">
+                    <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                      <a href="#" target="_blank"><img src="assets/img/experience/dv.png" class="img-fluid"
+                          style="float:left;margin:0 10px 0 0;" width="90"></a>
+                      <h4 style="text-align:left;"><a href="#" target="_blank" style="color:#12d640">DEV PERSO :
+                          road-degradation-prediction-application</a><br> </h4>
+                      <h5 style="text-align:left;"><em>Exercise de recherche et developpement Interne</em></h5>
+                      <span class="left" style="float:left;color:#fff;"><em>Mars 2019 - Octobre 2022,
+                          Friendship</em></span>
+                      <span class="right" style="float:right;color:#fff;"><em>Antananarivo,
+                          Madagascar</em></span><br><br>
+                      <ul style="text-align:left;"><strong>Langage et Technos:</strong>
+                        JSP/Spring/Tomcat/REST/Mysql/Linux/Git/...<br>
+                        <li>
+                          Le projet d'application de prédiction de dégradation des routes pour Madagascar vise à
+                          anticiper les
+                          problèmes routiers en utilisant des données historiques et en temps réel.
+                          Il intègre des technologies telles que l'IoT (Internet des objets) et l'apprentissage
+                          automatique pour
+                          évaluer les paramètres influents.
+                          L'interface conviviale offre une cartographie visuelle, des alertes en temps réel et encourage
+                          la
+                          participation communautaire.
+                          La sécurité des données est une priorité, tout comme les partenariats avec les autorités
+                          locales.
+                          La durabilité et la scalabilité sont intégrées à la conception, avec un accent sur la
+                          formation et la
+                          sensibilisation des utilisateurs.
+                          L'objectif est d'améliorer la gestion de l'infrastructure routière et de promouvoir une
+                          maintenance
+                          proactive.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="dev&maintenance" role="tabpanel" aria-labelledby="dev&maintenance-tab">
+                <h4 class="mb-4">We move your world!</h4>
+                <div class="col-lg-12" data-aos="fade-up">
+                  <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" target="_blank"><img src="assets/img/experience/dv.png" class="img-fluid"
+                        style="float:left;margin:0 10px 0 0;" width="90"></a>
+                    <h4 style="text-align:left;"><a href="#" target="_blank" style="color:#12d640">DEV PERSO :
+                        road-degradation-prediction-application</a><br> </h4>
+                    <h5 style="text-align:left;"><em>Exercise de recherche et developpement Interne</em></h5>
+                    <span class="left" style="float:left;color:#fff;"><em>Mars 2019 - Octobre 2022,
+                        Friendship</em></span>
+                    <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span><br><br>
+                    <ul style="text-align:left;"><strong>Langage et Technos:</strong>
+                      JSP/Spring/Tomcat/REST/Mysql/Linux/Git/...<br>
+                      <li>
+                        Le projet d'application de prédiction de dégradation des routes pour Madagascar vise à anticiper
+                        les
+                        problèmes routiers en utilisant des données historiques et en temps réel.
+                        Il intègre des technologies telles que l'IoT (Internet des objets) et l'apprentissage
+                        automatique pour
+                        évaluer les paramètres influents.
+                        L'interface conviviale offre une cartographie visuelle, des alertes en temps réel et encourage
+                        la
+                        participation communautaire.
+                        La sécurité des données est une priorité, tout comme les partenariats avec les autorités
+                        locales.
+                        La durabilité et la scalabilité sont intégrées à la conception, avec un accent sur la formation
+                        et la
+                        sensibilisation des utilisateurs.
+                        L'objectif est d'améliorer la gestion de l'infrastructure routière et de promouvoir une
+                        maintenance
+                        proactive.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="formation&atelier" role="tabpanel" aria-labelledby="formation&atelier-tab">
+                <h4 class="mb-4">We move your world!</h4>
+                <div class="col-lg-12" data-aos="fade-up">
+                  <blockquote class="blockquote">
+                    <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                      <a href="#" target="_blank"><img src="assets/img/experience/dv.png" class="img-fluid"
+                          style="float:left;margin:0 10px 0 0;" width="90"></a>
+                      <h4 style="text-align:left;"><a href="#" target="_blank" style="color:#12d640">DEV PERSO :
+                        </a><br> </h4>
+                      <h5 style="text-align:left;"><em>Exercise de recherche et developpement Interne</em></h5>
+                      <span class="left" style="float:left;color:#fff;"><em>Juillet 2019 , Friendship</em></span>
+                      <span class="right" style="float:right;color:#fff;"><em>Antananarivo,
+                          Madagascar</em></span><br><br>
+                      <ul style="text-align:left;"><strong>Langage et Technos:</strong>
+                        MariaDB/Mysql/PostgreSQL/Linux/Git/...<br>
+                        <li>
+                          La configuration d'une base de données PostgreSQL avec un serveur principal (master) et un
+                          serveur
+                          secondaire (slave) implique l'installation de PostgreSQL sur chaque serveur, la configuration
+                          du master
+                          pour autoriser la réplication, la création d'un utilisateur de réplication, et la réalisation
+                          d'une
+                          sauvegarde initiale transférée vers le slave. La configuration du slave comprend la
+                          modification des
+                          fichiers de configuration, le démarrage de la récupération, et la surveillance continue.
+                          Des tests de basculement et des ajustements de configuration sont effectués, mettant l'accent
+                          sur la
+                          sécurité et les sauvegardes régulières du serveur principal. </li>
+                      </ul>
+                    </div>
+                  </blockquote>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= End blog Section ======= -->
+  <!-- ======= Start Service Section ======= -->
+
+  <section id="messervices" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>PRESTATIONS DE SERVICES</h2>
+      </div>
+      <h5 class="mb-5" style="font-family:'Lucida Console', monospace">Je travaille avec une variété de clients et de partenaires pour donner vie à des idées
+        pertinentes.</h5>  
+      <div class="col-12 layout-spacing">
+        <div class="statbox widget box box-shadow">
+          <div class="widget-content widget-content-area rounded-background-pills">
+            <ul class="nav nav-pills justify-content-center" id="rounded-background-pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link btn-rounded active" id="Consultation-tab" data-toggle="pill" href="#Consultation"
+                  role="tab" aria-controls="Consultation" aria-selected="true">
+                  <i class="flaticon-home-fill-1"></i> Consultant
+                </a>
+              </li>
+
+              <li class="nav-item ml-1">
+                <a class="nav-link btn-rounded" id="devstrategie-tab" data-toggle="pill" href="#devstrategie" role="tab" aria-controls="devstrategie" aria-selected="false">
+                  <i class="flaticon-user-7"></i> Stratégie Digitale
+                </a>
+              </li>
+
+              <li class="nav-item ml-1">
+                <a class="nav-link btn-rounded" id="devmaintenance-tab" data-toggle="pill" href="#devmaintenance"
+                  role="tab" aria-controls="devmaintenance" aria-selected="false">
+                  <i class="flaticon-telephone"></i> Maintenance
+                </a>
+              </li>
+
+              <li class="nav-item ml-1">
+                <a class="nav-link btn-rounded" id="formationatelier-tab" data-toggle="pill" href="#formationatelier"
+                  role="tab" aria-controls="formationatelier" aria-selected="false">
+                  <i class="flaticon-settings-7"></i> Formation & Ateliers
+                </a>
+              </li>
+            </ul><br>
+
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="Consultation" role="tabpanel" 
+              aria-labelledby="Consultation-tab">
+                <br>
+                <div class="col-lg-12" data-aos="fade-up">
+                  <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" target="_blank">
+                      <img src="assets/img/other/cahier_charge.png" class="img-fluid"
+                        style="float:left;margin:0 10px 0 0;" width="90">
+                    </a>
+                    <h4 style="text-align:center;">
+                      <a href="#" target="_blank" style="color:#12d640">Consultation et Cahier des Charges pour digitaliser vos activités</a>
+                    </h4><br><hr>
+                    <h5 style="text-align:left;"><em>Consultation Personnalisée :</em></h5>
+                    <span class="left" style="float:left;color:#fff;"><em>Analyse approfondie de vos besoins spécifiques pour comprendre vos objectifs et vos contraintes.</em></span>
+                    <!-- <span class="right" style="float:right;color:#fff;"><em>Rome, Italy (Remote)</em></span> -->
+                    <br>
+                    <ul style="text-align:left;"> 
+                      <li><strong>Analyse des Solutions Techniques:</strong>  Comparaison des différentes technologies disponibles.</li>
+                      <li><strong>Évaluation des Coûts: </strong>  Estimation des coûts de développement et de maintenance.</li>
+                      <li><strong>Plan de Mise en Œuvre: </strong> Roadmap pour la réalisation du projet.</li> 
+                    </ul>
+                    <h5 style="text-align:left;"><em>Planification de Projet :</em></h5>
+                    <span class="left" style="float:left;color:#fff;"><em>Élaboration d'un plan détaillé pour guider la réalisation de votre projet.</em></span>
+                    <!-- <span class="right" style="float:right;color:#fff;"><em>Rome, Italy (Remote)</em></span> -->
+                    <br>
+                    <ul style="text-align:left;"> 
+                      <li><strong>Calendrier de Projet:</strong>  Chronogramme avec les étapes clés et les échéances.</li>
+                      <li><strong>Ressources Nécessaires: </strong>  Identification des ressources humaines et matérielles.</li>
+                      <li><strong>Gestion des Risques: </strong> Identification et gestion des risques potentiels.</li> 
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="devstrategie" role="tabpanel" aria-labelledby="devstrategie-tab">
+                <br>
+                <div class="col-lg-12" data-aos="fade-up">
+                  <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" target="_blank">
+                      <img src="assets/img/other/strategie_digitale.png" class="img-fluid" style="float:left;margin:0 10px 0 0;"
+                        width="90">
+                    </a>
+                    <h4 style="text-align:left;">
+                      <a href="#" target="_blank" style="color:#12d640">Développement et Stratégie Digitale</a>
+                    </h4>
+                    <h5 style="text-align:left;"><em>Développement de stratégies digitales pour atteindre vos objectifs commerciaux.</em></h5>
+                    <span class="left" style="float:left;color:#fff;"><em>Mars 2019 - Octobre 2022,
+                        Friendship</em></span>
+                    <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span>
+                    <br><br>
+                    <ul style="text-align:left;">
+                      <strong>Analyse de l'Environnement:</strong>
+                      JSP/Spring/Tomcat/REST/MySQL/Linux/Git/...
+                      <li>Consultation en stratégie digitale</li>
+                      <li>Optimisation des performances web</li>
+                      <li>Intégration de systèmes et API</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="devmaintenance" role="tabpanel" aria-labelledby="devmaintenance-tab">
+                <br>
+                <div class="col-lg-12" data-aos="fade-up">
+                  <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" target="_blank">
+                      <img src="assets/img/other/maintenance.png" class="img-fluid" style="float:left;margin:0 10px 0 0;"
+                        width="90">
+                    </a><br>
+                    <center><h4 style="text-align:center;">
+                      <a href="#" target="_blank" style="color:#12d640">Développement et Maintenance</a>
+                    </h4></center><hr>
+                    <h5 style="text-align:left;"><em>Développement d'Applications Web Personnalisées :</em></h5>
+                    <span class="left" style="float:left;color:#fff;"><em>Création d'applications web sur mesure répondant aux besoins spécifiques de votre entreprise.</em></span>
+                    <!-- <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span> -->
+                    <br>
+                    <ul style="text-align:left;">                      
+                      <li><strong>Analyse des Besoins:</strong> Compréhension approfondie des besoins fonctionnels.</li>
+                      <li><strong>Développement Agile:</strong> Utilisation des méthodes agiles pour un développement flexible et itératif.</li>
+                      <li><strong>Tests et Déploiement:</strong> Validation et mise en ligne de l'application.</li> 
+                    </ul>
+
+                    <h5 style="text-align:left;"><em>Développement Front-End et Back-End :</em></h5>
+                    <span class="left" style="float:left;color:#fff;"><em>Services complets de développement front-end et back-end pour des applications intégrées.</em></span>                     
+                    <br>
+                    <ul style="text-align:left;">
+                      <li><strong>Langages et Technologies:</strong> À definir selon le besoins<sup><i>1</i></sup> </li>                    
+                      <li><strong>Architecture de l'Application:</strong> Conception de l'architecture front-end et back-end.</li>
+                      <li><strong>Sécurité et Performance:</strong> Optimisation de la sécurité et des performances de l'application.</li> 
+                    </ul>
+                    <span class="right" style="float:right;color:#fff;"><em><i><sup>1</sup>Voir condition de faisabilité</i></em></span>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="formationatelier" role="tabpanel" aria-labelledby="formationatelier-tab">
+                <br>
+                <div class="col-lg-12" data-aos="fade-up">
+                  <blockquote class="blockquote">
+                    <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+                      <a href="#" target="_blank">
+                        <img src="assets/img/other/formation.png" class="img-fluid" style="float:left;margin:0 10px 0 0;"
+                          width="90">
+                      </a>
+                      <h4 style="text-align:left;">
+                        <a href="#" target="_blank" style="color:#12d640">Formation et Ateliers</a>
+                      </h4>
+                      <h5 style="text-align:left;"><em>Exercice de recherche et développement interne</em></h5>
+                      <span class="left" style="float:left;color:#fff;"><em>Juillet 2019, Friendship</em></span>
+                      <span class="right" style="float:right;color:#fff;"><em>Antananarivo, Madagascar</em></span>
+                      <br><br>
+                      <ul style="text-align:left;">
+                        <strong>Langages et Technologies:</strong>
+                        MariaDB/MySQL/PostgreSQL/Linux/Git/...
+                        <li>Formation au développement web</li>
+                        <li>Ateliers personnalisés</li>
+                        <li>Suivi post-atelier</li>
+                      </ul>
+                    </div>
+                  </blockquote>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======= End services Section ======= -->
+
+
+
+  <!-- ======= Start CV Section ======= -->
+
+  <section id="cv" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>CV</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+          <a href="https://drive.google.com/file/d/1Tg1F6anAdZDcGmwIu7SCLCnYYM7zhdn5/view?usp=sharing" target="_blank">
+            <div class="icon"><i class="icofont-page"></i></div>
+          </a>
+          <h4 class="title"><a style="color:#12d640;"
+              href="https://drive.google.com/file/d/1Tg1F6anAdZDcGmwIu7SCLCnYYM7zhdn5/view?usp=sharing"
+              target="_blank">Curriculum Vitae</a></h4>
+          <p class="description" style="color:#fff;">Le lien ci-dessus contient mon curriculum vitae (CV).</p>
+        </div>
+        <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
+          <a href="https://resume.github.io/?harilalariri" target="_blank">
+            <div class="icon"><i class="bx bxl-github"></i></div>
+          </a>
+          <h4 class="title"><a style="color:#12d640;" href="https://resume.github.io/?harilalariri"
+              target="_blank">GitHub</a></h4>
+          <p class="description" style="color:#fff;">Le lien ci-dessus contient mon GitHub repos/activity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= End CV Section ======= -->
+
+
+
+  <!-- ======= Start Contact Section ======= -->
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3 style="color:#12d640;">Social </h3>
+            <div class="social-links">
+              <a href="mailto:harilalariri@gmail.com" target="_blank" class="gmail"><i class="bx bxl-google"></i></a>
+              <a href="https://www.linkedin.com/in/harilalarakotoniaina/" target="_blank" class="linkedin"><i
+                  class="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/riri7887" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+              <!-- <a href="https://www.instagram.com/harilalariri" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+              <!-- <a href="https://www.youtube.com/@harilalariri" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>  -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3 style="color:#12d640;">Contacts</h3>
+            <a href="mailto:harilalariri@gmail.com" target="_blank">
+              <p><i class="icofont-rounded-right"></i> harilalariri@gmail.com</p>
+            </a>
+            <a href="#" target="_blank">
+              <p><i class="icofont-rounded-right"></i> 032 60 183 22</p>
+            </a>
+            <a href="#" target="_blank">
+              <p><i class="icofont-rounded-right"></i> 034 05 969 59</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Vos nom et prénom" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Votre adresse E-mail" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="Objet" id="Objet" placeholder="Objet" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Votre message a été envoyé avec succès. Merci!</div>
+        </div>
+        <div class="text-center"><button type="submit">Envoyé </button></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======= End Contact Section ======= -->
+
+
+
+  <!-- Vendor JS Files -->
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+
+  <script type="text/javascript">
+    var typed = new Typed('.typing', {
+      strings: ["un Developpeur", "Passionné"],
+      loop: true,
+      typeSpeed: 65,
+      backSpeed: 65
+    });
+  </script>
+
+
+
+  <!-- Template Main JS File -->
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
