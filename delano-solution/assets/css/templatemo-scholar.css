@@ -683,13 +683,13 @@ Banner Style
 }
 
 .main-banner .item-3 {
-  background-image: url(../images/banner-item-03.jpg);
+  background-image: url(../images/banner-item-06.jpg); 
 }
 .main-banner .item-4 {
   background-image: url(../images/banner-item-03.jpg);
 }
 .main-banner .item-5 {
-  background-image: url(../images/banner-item-01.jpg);
+  background-image: url(../images/banner-item-04.jpg);
 }
 .main-banner .item-6 {
   background-image: url(../images/banner-item-03.jpg);
@@ -725,6 +725,7 @@ Banner Style
 }
 
 .main-banner .item p {
+  font-size: 20px;
   color: #fff;
   width: 65%;
 }
