@@ -683,16 +683,16 @@ Banner Style
 }
 
 .main-banner .item-3 {
-  background-image: url(../images/banner-item-03.jpg);
+  background-image: url(../images/banner-item-13.jpg); 
 }
 .main-banner .item-4 {
   background-image: url(../images/banner-item-03.jpg);
 }
 .main-banner .item-5 {
-  background-image: url(../images/banner-item-01.jpg);
+  background-image: url(../images/banner-item-04.jpg);
 }
 .main-banner .item-6 {
-  background-image: url(../images/banner-item-03.jpg);
+  background-image: url(../images/banner-item-07.jpg);
 }
 
 .main-banner .item {
@@ -725,6 +725,7 @@ Banner Style
 }
 
 .main-banner .item p {
+  font-size: 20px;
   color: #fff;
   width: 65%;
 }
@@ -1740,6 +1741,7 @@ body {
     width: 100%;
   }
   .main-banner .item h2 {
+    text-align: center;
     font-size: 36px;
     line-height: 50px;
   }
