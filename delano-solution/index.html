@@ -21,17 +21,11 @@
     <link rel="stylesheet" href="assets/css/templatemo-scholar.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
-    <!--
-
-TemplateMo 586 Scholar
-
-https://templatemo.com/tm-586-scholar
-
--->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!--REACT-->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
 
   <body>
@@ -599,6 +593,8 @@ https://templatemo.com/tm-586-scholar
         </div>
       </div>
 
+    
+
     <!-- TEAM SECTION
    <div class="team section" id="team">
     <div class="container">
@@ -905,11 +901,7 @@ https://templatemo.com/tm-586-scholar
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <button
-                        type="submit"
-                        id="form-submit"
-                        class="orange-button"
-                      >
+                      <button type="submit" id="form-submit" class="orange-button">
                         Send Message Now
                       </button>
                     </fieldset>
@@ -924,15 +916,29 @@ https://templatemo.com/tm-586-scholar
     </div>
 
     <footer>
-      <div class="container">
-        <div class="col-lg-12">
+      <div class="container" id="foteerContainer"> 
+      </div>
+    </footer>
+
+
+    <script type="text/babel">
+      function Hello() {
+        return  <div class="col-lg-12">
           <p>
             Copyright © 2024 DELANO SOLUTIONS. All rights reserved.
             &nbsp;&nbsp;&nbsp;
           </p>
-        </div>
-      </div>
-    </footer>
+        </div>;
+      }
+      const container = document.getElementById('foteerContainer');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Hello />)
+    </script>
+
+<script src="https://unpkg.com/react/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/antd/dist/antd.js"></script>
+<script src="index.js" type="text/babel"></script>
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
