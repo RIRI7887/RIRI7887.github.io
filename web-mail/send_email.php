@@ -1,4 +1,4 @@
-<?php
+<?php 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Dotenv\Dotenv;
@@ -9,20 +9,16 @@ $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect form data
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $phone = htmlspecialchars($_POST['phone']);
     $message = htmlspecialchars($_POST['message']);
     
-    // Validate email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "Invalid email format";
         exit;
     }
 
-    // Email details
-    //$to = "Erich@Delanosolutions.Co.Za";
     $to = "harilalariri@gmail.com";
     $subject = "New Contact Us Message from $name";
     $body = "You have received a new message from your website contact form.\n\n".
@@ -33,23 +29,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "Message:\n$message";
 
     $mail = new PHPMailer(true);
+    $mail->SMTPDebug = 2;  // Enable verbose debug output
 
     try {
-        //Server settings
-        $mail->isSMTP();                                    // Set mailer to use SMTP
-        $mail->Host = $_ENV['SMTP_HOST'];                   // Specify main and backup SMTP servers
-        $mail->SMTPAuth = true;                             // Enable SMTP authentication
-        $mail->Username = $_ENV['SMTP_USER'];               // SMTP username
-        $mail->Password = $_ENV['SMTP_PASS'];               // SMTP password
-        $mail->SMTPSecure = 'tls';                          // Enable TLS encryption, `ssl` also accepted
-        $mail->Port = $_ENV['SMTP_PORT'];                   // TCP port to connect to
+        $mail->isSMTP();
+        $mail->Host = $_ENV['SMTP_HOST'];
+        $mail->SMTPAuth = true;
+        $mail->Username = $_ENV['SMTP_USER'];
+        $mail->Password = $_ENV['SMTP_PASS'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // Use PHPMailer::ENCRYPTION_STARTTLS if you use port 587
+        $mail->Port = $_ENV['SMTP_PORT'];
 
-        //Recipients
         $mail->setFrom($email, $name);
-        $mail->addAddress($to);                             // Add a recipient
+        $mail->addAddress($to);
 
-        // Content
-        $mail->isHTML(false);                               // Set email format to plain text
+        $mail->isHTML(false);
         $mail->Subject = $subject;
         $mail->Body    = $body;
 
