@@ -21,14 +21,12 @@
     <link rel="stylesheet" href="assets/css/templatemo-scholar.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <!--REACT-->
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> 
+
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.12.2/i18next.min.js"></script>
   </head>
 
-  <body>
+  <body> 
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
       <div class="preloader-inner">
@@ -53,37 +51,38 @@
                 <h1>Delano Solutions  </h1>
                
               </a>
-              <!-- ***** Logo End ***** -->
-              <!-- ***** Serach Start ***** -->
-              <!-- <div class="search-input">
-                      <form id="search" action="#">
-                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
-                        <i class="fa fa-search"></i>
-                      </form>
-                    </div> -->
-              <!-- ***** Serach Start ***** -->
-              <!-- ***** Menu Start ***** -->
+               
               <ul class="nav">
                 <li class="scroll-to-section">
-                  <a href="#top" class="active">Home</a>
+                  <a href="#top" class="active" data-i18n="home">Home</a>
                 </li>
                 <li class="scroll-to-section">
-                  <a href="#services">Services</a>
+                  <a href="#services" data-i18n="services">Services</a>
                 </li>
-                <li class="scroll-to-section"><a href="#about-us">FAQ</a></li>
-                <li class="scroll-to-section">
+                <li class="scroll-to-section"><a href="#about-us" data-i18n="faq">FAQ</a></li>
+                <!-- <li class="scroll-to-section">
                   <a href="#contact">Contact us</a>
-                </li>
+                </li> -->
                 <!-- <li class="scroll-to-section"><a href="#team">Team</a></li> -->
                 <!-- <li class="scroll-to-section"><a href="#events">Events</a></li> -->
                 <li class="scroll-to-section">
-                  <a href="#contact">Request consulation</a>
+                  <a href="#contact" data-i18n="requestConsultation">Request consulation</a>
                 </li>
                 <li style="text-decoration: underline;text-decoration-color: rgb(97, 209, 215); text-decoration-thickness: 4px;" class="scroll-to-section">
                   <a><i class="fa-solid fa-address-card"></i> erich@delanosolutions.co.za </a>
                 </li>
                 <li style="text-decoration: underline;text-decoration-color: rgb(97, 209, 215); text-decoration-thickness: 4px;" class="scroll-to-section">
                   <a ><i class="fa-solid fa-square-phone"></i>+27 83 366 7608</a>
+                </li>
+                <li class="scroll-to-section">
+                  <a >
+                  <div>
+                    <select id="languageSwitcher">
+                      <option value="en">English</option>
+                      <option value="fr">Français</option>
+                    </select>
+                  </div>
+                  </a>
                 </li>
               </ul>
               <a class="menu-trigger">
@@ -104,16 +103,16 @@
             <div class="owl-carousel owl-banner">
               <div class="item item-1">
                 <div class="header-text">
-                  <span class="category">What We Offer</span>
-                  <h2>Ensuring  Safety Workplace</h2>
-                  <p>
+                  <span class="category" data-i18n="whatWeOffer">What We Offer</span>
+                  <h2 data-i18n="ensuringSafetyWorkplace">Ensuring  Safety Workplace</h2>
+                  <p data-i18n="comprehensiveRiskAssessments">
                     Our comprehensive risk assessments identify potential
                     hazards and implement control measures to create a safer
                     work environment for everyone.
                   </p>
                   <div class="buttons">
                     <div class="main-button">
-                      <a href="#">Request Consultation</a>
+                      <a href="#" data-i18n="requestConsultation">Request Consultation</a>
                     </div>
                     <div class="icon-button">
                       <a href="#"><i class="fa fa-shield fa-2xl"></i></a>
@@ -132,7 +131,7 @@
                   </p>
                   <div class="buttons">
                     <div class="main-button">
-                      <a href="#">Request Consultation</a>
+                      <a href="#" data-i18n="requestConsultation">Request Consultation</a>
                     </div>
                     <div class="icon-button">
                       <a href="#"><i class="fa-solid fa-user-shield"></i></a>
@@ -259,8 +258,7 @@
                   staff. <br />Essential for addressing safety concerns and
                   complying with insurance requirements.<br /><br />
                 </p>
-                <div class="main-button">
-                  <!-- <a href="#">Read More</a> -->
+                <div class="main-button"> 
                 </div>
               </div>
             </div>
@@ -436,115 +434,7 @@
       </div>
     </div>
 
-    <!-- COURSE SECTION
   
-  <section class="section courses" id="courses" >
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="section-heading">
-            <h6>Latest Courses</h6>
-            <h2>Latest Courses</h2>
-          </div>
-        </div>
-      </div>
-      <ul class="event_filter">
-        <li>
-          <a class="is_active" href="#!" data-filter="*">Show All</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".design">Webdesign</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".development">Development</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".wordpress">Wordpress</a>
-        </li>
-      </ul>
-      <div class="row event_box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/course-01.jpg" alt=""></a>
-              <span class="category">Webdesign</span>
-              <span class="price"><h6><em>$</em>160</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Stella Blair</span>
-              <h4>Learn Web Design</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/course-02.jpg" alt=""></a>
-              <span class="category">Development</span>
-              <span class="price"><h6><em>$</em>340</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Cindy Walker</span>
-              <h4>Web Development Tips</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design wordpress">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/course-03.jpg" alt=""></a>
-              <span class="category">Wordpress</span>
-              <span class="price"><h6><em>$</em>640</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">David Hutson</span>
-              <h4>Latest Web Trends</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/course-04.jpg" alt=""></a>
-              <span class="category">Development</span>
-              <span class="price"><h6><em>$</em>450</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Stella Blair</span>
-              <h4>Online Learning Steps</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/course-05.jpg" alt=""></a>
-              <span class="category">Wordpress</span>
-              <span class="price"><h6><em>$</em>320</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">Sophia Rose</span>
-              <h4>Be a WordPress Master</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
-          <div class="events_item">
-            <div class="thumb">
-              <a href="#"><img src="assets/images/course-06.jpg" alt=""></a>
-              <span class="category">Webdesign</span>
-              <span class="price"><h6><em>$</em>240</h6></span>
-            </div>
-            <div class="down-content">
-              <span class="author">David Hutson</span>
-              <h4>Full Stack Developer</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> 
-  END OF COURSE SECTION-->
 
       <div class="section fun-facts">
         <div class="container">
@@ -601,70 +491,7 @@
 
     
 
-    <!-- TEAM SECTION
-   <div class="team section" id="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="team-member">
-            <div class="main-content">
-              <img src="assets/images/member-01.jpg" alt="">
-              <span class="category">UX Teacher</span>
-              <h4>Sophia Rose</h4>
-              <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="team-member">
-            <div class="main-content">
-              <img src="assets/images/member-02.jpg" alt="">
-              <span class="category">Graphic Teacher</span>
-              <h4>Cindy Walker</h4>
-              <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="team-member">
-            <div class="main-content">
-              <img src="assets/images/member-03.jpg" alt="">
-              <span class="category">Full Stack Master</span>
-              <h4>David Hutson</h4>
-              <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="team-member">
-            <div class="main-content">
-              <img src="assets/images/member-04.jpg" alt="">
-              <span class="category">Digital Animator</span>
-              <h4>Stella Blair</h4>
-              <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>  
-  END OF TEAM SECTION-->
+    
 
     <div class="section testimonials">
       <div class="container">
@@ -724,132 +551,23 @@
       </div>
     </div>
 
-    <!-- EVENT SECTION
-  <div class="section events" id="events">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="section-heading">
-            <h6>Schedule</h6>
-            <h2>Upcoming Events</h2>
-          </div>
-        </div>
-        <div class="col-lg-12 col-md-6">
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="image">
-                  <img src="assets/images/event-01.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-9">
-                <ul>
-                  <li>
-                    <span class="category">Web Design</span>
-                    <h4>UI Best Practices</h4>
-                  </li>
-                  <li>
-                    <span>Date:</span>
-                    <h6>16 Feb 2036</h6>
-                  </li>
-                  <li>
-                    <span>Duration:</span>
-                    <h6>22 Hours</h6>
-                  </li>
-                  <li>
-                    <span>Price:</span>
-                    <h6>$120</h6>
-                  </li>
-                </ul>
-                <a href="#"><i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12 col-md-6">
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="image">
-                  <img src="assets/images/event-02.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-9">
-                <ul>
-                  <li>
-                    <span class="category">Front End</span>
-                    <h4>New Design Trend</h4>
-                  </li>
-                  <li>
-                    <span>Date:</span>
-                    <h6>24 Feb 2036</h6>
-                  </li>
-                  <li>
-                    <span>Duration:</span>
-                    <h6>30 Hours</h6>
-                  </li>
-                  <li>
-                    <span>Price:</span>
-                    <h6>$320</h6>
-                  </li>
-                </ul>
-                <a href="#"><i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12 col-md-6">
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="image">
-                  <img src="assets/images/event-03.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-9">
-                <ul>
-                  <li>
-                    <span class="category">Full Stack</span>
-                    <h4>Web Programming</h4>
-                  </li>
-                  <li>
-                    <span>Date:</span>
-                    <h6>12 Mar 2036</h6>
-                  </li>
-                  <li>
-                    <span>Duration:</span>
-                    <h6>48 Hours</h6>
-                  </li>
-                  <li>
-                    <span>Price:</span>
-                    <h6>$440</h6>
-                  </li>
-                </ul>
-                <a href="#"><i class="fa fa-angle-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> 
-  END OF  EVENT SECTION-->
+   
 
     <div class="contact-us section" id="contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 align-self-center">
             <div class="section-heading">
-              <h6>Contact Us</h6>
-              <h2>Feel free to contact us anytime</h2>
-              <p>
+              <h6 data-i18n="contactUs">Contact Us</h6>
+              <h2 data-i18n="feelFreeToContact">Feel free to contact us anytime</h2>
+              <p data-i18n="discoverHowDelanoCanHelp">
                 Discover how Delano solutions can enhance your workplace safety
                 and compliance. <br>Contact us today to schedule a consultation or
                 inquire about our services.
               </p>
               <div class="special-offer">
                 <span class="offer">  </span>
-                <h6>  
+                <h6 data-i18n="leaveYourEmail">  
                   Please leave your email and phone number for us to contact you
                   for consultation. </h6>
                 <a href="#"><i class="fa fa-angle-right"></i>   </a>
@@ -907,7 +625,7 @@
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <button type="submit" id="form-submit" class="orange-button">
+                      <button type="submit" id="form-submit" class="orange-button" data-i18n="sendMessageNow">
                         Send Message Now
                       </button>
                     </fieldset>
@@ -923,29 +641,14 @@
 
     <footer>
       <div class="container" id="foteerContainer"> 
-      </div>
-    </footer>
-
-
-    <script type="text/babel">
-      function Hello() {
-        return  <div class="col-lg-12">
+      <div class="col-lg-12" data-i18n="copyright">
           <p>
             Copyright © 2024 DELANO SOLUTIONS. All rights reserved.
             &nbsp;&nbsp;&nbsp;
           </p>
-        </div>;
-      }
-      const container = document.getElementById('foteerContainer');
-      const root = ReactDOM.createRoot(container);
-      root.render(<Hello />)
-    </script>
-
-<script src="https://unpkg.com/react/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/antd/dist/antd.js"></script>
-<script src="index.js" type="text/babel"></script>
-
+        </div>
+      </div>
+    </footer> 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -954,5 +657,72 @@
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/counter.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+      // i18next initialization
+      i18next.init({
+        lng: 'en',
+        resources: {
+          en: {
+            translation: {
+              delanoSolutions: "Delano Solutions",
+              home: "Home",
+              services: "Services",
+              faq: "FAQ",
+              contactUs: "Contact us",
+              requestConsultation: "Request Consultation",
+              whatWeOffer: "What We Offer",
+              ensuringSafetyWorkplace: "Ensuring Safety Workplace",
+              comprehensiveRiskAssessments: "Our comprehensive risk assessments identify potential hazards and implement control measures to create a safer work environment for everyone.",
+              feelFreeToContact: "Feel free to contact us anytime",
+              discoverHowDelanoCanHelp: "Discover how Delano solutions can enhance your workplace safety and compliance. Contact us today to schedule a consultation or inquire about our services.",
+              leaveYourEmail: "Please leave your email and phone number for us to contact you for consultation.",
+              sendMessageNow: "Send Message Now",
+              copyright: "Copyright © 2024 DELANO SOLUTIONS. All rights reserved."
+            }
+          },
+          fr: {
+            translation: {
+              delanoSolutions: "Solutions Delano",
+              home: "Accueil",
+              services: "Services",
+              faq: "FAQ",
+              contactUs: "Contactez-nous",
+              requestConsultation: "Demander une consultation",
+              whatWeOffer: "Ce que nous offrons",
+              ensuringSafetyWorkplace: "Assurer la sécurité au travail",
+              comprehensiveRiskAssessments: "Nos évaluations complètes des risques identifient les dangers potentiels et mettent en œuvre des mesures de contrôle pour créer un environnement de travail plus sûr pour tout le monde.",
+              feelFreeToContact: "N'hésitez pas à nous contacter à tout moment",
+              discoverHowDelanoCanHelp: "Découvrez comment les solutions Delano peuvent améliorer la sécurité et la conformité de votre lieu de travail. Contactez-nous dès aujourd'hui pour planifier une consultation ou vous renseigner sur nos services.",
+              leaveYourEmail: "Veuillez laisser votre e-mail et votre numéro de téléphone pour que nous puissions vous contacter pour une consultation.",
+              sendMessageNow: "Envoyer le message maintenant",
+              copyright: "Droits d'auteur © 2024 SOLUTIONS DELANO. Tous les droits sont réservés."
+            }
+          }
+        }
+      }, function(err, t) { 
+        updateContent();
+      });
+
+      function updateContent() {
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          element.textContent = i18next.t(key);
+        });
+      }
+
+      document.getElementById('languageSwitcher').addEventListener('change', function() {
+        const selectedLanguage = this.value;
+        i18next.changeLanguage(selectedLanguage, function(err, t) {
+          if (err) return console.error('something went wrong loading', err);
+          updateContent();
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        updateContent();
+      });
+
+    </script>
   </body>
 </html>
